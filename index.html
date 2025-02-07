@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BisonBytes 2025 Hackathon</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+
+  <body class="h-screen flex bg-gray-100 page-transition-enter">
+    <aside
+      class="w-1/5 bg-white h-full shadow-md flex flex-col items-center"
+    ></aside>
+    <main class="flex-1 p-4 overflow-auto">
+      <!-- Gmail-style header with search -->
+      <div
+        class="flex items-center justify-between px-4 py-2 shadow-sm border-b"
+      >
+        <!-- Search Bar -->
+        <div
+          class="flex items-center bg-white rounded-full px-4 py-2 w-[600px] shadow-sm border"
+        >
+          <i class="fas fa-search text-gray-500"></i>
+          <input
+            type="text"
+            placeholder="Search mail"
+            class="bg-transparent outline-none text-gray-700 pl-2 w-full"
+          />
+          <button class="ml-2 p-1 hover:bg-gray-200 rounded-full">
+            <i class="fas fa-sliders-h text-gray-600"></i>
+          </button>
+        </div>
+
+        <!-- Right Side (Interactive Elements) -->
+        <div class="flex items-center space-x-4">
+          <!-- Active Status -->
+          <div
+            class="flex items-center space-x-1 bg-white rounded-full px-3 py-1 text-gray-700 text-sm border shadow-sm"
+          >
+            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            <span>Active</span>
+            <i class="fas fa-chevron-down text-gray-500"></i>
+          </div>
+
+          <!-- Settings & Apps -->
+          <button class="p-2 hover:bg-gray-200 rounded-full">
+            <i class="fas fa-cog text-gray-600"></i>
+          </button>
+          <button class="p-2 hover:bg-gray-200 rounded-full">
+            <i class="fas fa-th text-gray-600"></i>
+          </button>
+
+          <!-- Profile Icon -->
+          <button class="p-2 rounded-full">
+            <img
+              src="images/BuddysBirthday.png"
+              alt="User Avatar"
+              class="w-8 h-8 rounded-full border"
+            />
+          </button>
+        </div>
+      </div>
+
+      <!-- Email controls - keeping only one instance -->
+      <!-- Email Actions and Categories Section -->
+
+      <div class="border-b bg-white rounded-t-lg overflow-hidden">
+        <div class="flex items-center justify-between px-4 py-2">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" class="w-4 h-4" />
+            <button class="p-2 hover:bg-gray-100 rounded">
+              <i class="fas fa-redo text-gray-600"></i>
+            </button>
+            <button class="p-2 hover:bg-gray-100 rounded">
+              <i class="fas fa-ellipsis-vertical text-gray-600"></i>
+            </button>
+          </div>
+          <div class="flex items-center gap-3 text-sm text-gray-600">
+            <span>1-6 of 11,560</span>
+            <button class="p-2 hover:bg-gray-100 rounded">
+              <i class="fas fa-keyboard text-gray-600"></i>
+            </button>
+            <button class="p-2 hover:bg-gray-100 rounded">
+              <i class="fas fa-chevron-left text-gray-600"></i>
+            </button>
+            <button class="p-2 hover:bg-gray-100 rounded">
+              <i class="fas fa-chevron-right text-gray-600"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Tabs (Updated with Text Under Primary & Clickable Social) -->
+        <div
+          class="flex px-4 py-2 bg-white border-b justify-between w-full text-sm"
+        >
+          <button
+            class="flex flex-col items-center text-blue-600 border-b-2 border-blue-600 px-4 py-1 w-1/5 font-medium"
+          >
+            <div class="flex items-center gap-2">
+              <i class="fas fa-inbox text-gray-700"></i>
+              <span>Primary</span>
+            </div>
+            <span class="text-[11px] text-white mt-0.5">Placeholder</span>
+            <!-- Hidden text for spacing -->
+          </button>
+
+          <button
+            class="flex flex-col items-start text-gray-700 hover:text-gray-900 px-4 py-1 w-1/5"
+          >
+            <div class="flex items-center gap-1">
+              <i class="fas fa-tag text-gray-700"></i>
+              <span>Promotions</span>
+              <span
+                class="bg-green-500 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded-full"
+                >2 new</span
+              >
+            </div>
+            <span class="text-[11px] text-gray-500 mt-0.5"
+              >Come hack with us!</span
+            >
+          </button>
+
+          <a
+            href="https://www.instagram.com/bison.bytes/"
+            target="_blank"
+            class="flex flex-col items-start text-gray-700 hover:text-gray-900 px-4 py-1 w-1/5"
+          >
+            <div class="flex items-center gap-1">
+              <i class="fas fa-user-friends text-gray-700"></i>
+              <span>Social</span>
+              <span
+                class="bg-blue-500 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded-full"
+                >5 new</span
+              >
+            </div>
+            <span class="text-[11px] text-gray-500 mt-0.5"
+              >Follow us on IG @bison.bytes</span
+            >
+          </a>
+
+          <button
+            class="flex flex-col items-start text-gray-700 hover:text-gray-900 px-4 py-1 w-1/5"
+          >
+            <div class="flex items-center gap-1">
+              <i class="fas fa-info-circle text-gray-700"></i>
+              <span>Updates</span>
+              <span
+                class="bg-orange-500 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded-full"
+                >14 new</span
+              >
+            </div>
+            <span class="text-[11px] text-gray-500 mt-0.5"
+              >Check your email!</span
+            >
+          </button>
+
+          <button
+            class="flex flex-col items-start text-gray-700 hover:text-gray-900 px-4 py-1 w-1/5"
+          >
+            <div class="flex items-center gap-1">
+              <i class="fas fa-file-alt text-gray-700"></i>
+              <span>Application</span>
+            </div>
+            <span class="text-[11px] text-gray-500 mt-0.5"
+              >Quick Way to Access Application</span
+            >
+          </button>
+        </div>
+      </div>
+
+      <section class="mt-2 mb-32">
+        <!-- Gmail-style email list -->
+        <div class="divide-y divide-gray-200 bg-white text-sm">
+          <!-- Email Row Template -->
+          <div
+            class="flex items-center h-12 px-4 hover:bg-gray-200 cursor-pointer"
+            onclick="window.location.href='/pages/faq.html'"
+          >
+            <div class="flex items-center gap-4 min-w-[200px]">
+              <input type="checkbox" class="w-4 h-4 rounded-sm" />
+              <button class="text-gray-400 hover:text-yellow-500">
+                <i class="far fa-star"></i>
+              </button>
+              <span class="font-medium text-gray-900">To: Hackers</span>
+            </div>
+            <div class="flex-1 flex gap-2 min-w-0 pr-4">
+              <span class="font-medium text-gray-900 truncate"
+                >Buddy the Bison's Party Prep:</span
+              >
+              <span class="text-gray-600 truncate"
+                >Hackathon Questions Answered!</span
+              >
+            </div>
+            <div class="text-xs text-gray-600 whitespace-nowrap">Mar 15</div>
+          </div>
+
+          <!-- Second Email -->
+          <div
+            class="flex items-center h-12 px-4 hover:bg-gray-200 cursor-pointer"
+            onclick="window.location.href='/pages/about.html'"
+          >
+            <div class="flex items-center gap-4 min-w-[200px]">
+              <input type="checkbox" class="w-4 h-4 rounded-sm" />
+              <button class="text-gray-400 hover:text-yellow-500">
+                <i class="far fa-star"></i>
+              </button>
+              <span class="font-medium text-gray-900">To: Hackers</span>
+            </div>
+            <div class="flex-1 flex gap-2 min-w-0 pr-4">
+              <span class="font-medium text-gray-900 truncate"
+                >BisonBytes 2025 are you coming?</span
+              >
+              <span class="text-gray-600 truncate"
+                >It's at Howard University!</span
+              >
+            </div>
+            <div class="text-xs text-gray-600 whitespace-nowrap">Mar 14</div>
+          </div>
+
+          <!-- Third Email -->
+          <div
+            class="flex items-center h-12 px-4 hover:bg-gray-200 cursor-pointer"
+            onclick="window.location.href='/pages/about.html'"
+          >
+            <div class="flex items-center gap-4 min-w-[200px]">
+              <input type="checkbox" class="w-4 h-4 rounded-sm" />
+              <button class="text-gray-400 hover:text-yellow-500">
+                <i class="far fa-star"></i>
+              </button>
+              <span class="font-medium text-gray-900">To: Hackers</span>
+            </div>
+            <div class="flex-1 flex gap-2 min-w-0 pr-4">
+              <span class="font-medium text-gray-900 truncate"
+                >You're Invited to the Ultimate Hackathon Party!</span
+              >
+              <span class="text-gray-600 truncate">BisonBytes 2025</span>
+            </div>
+            <div class="text-xs text-gray-600 whitespace-nowrap">Mar 13</div>
+          </div>
+
+          <!-- Fourth Email -->
+          <div
+            class="flex items-center h-12 px-4 hover:bg-gray-200 cursor-pointer"
+            onclick="window.location.href='/pages/sponsors.html'"
+          >
+            <div class="flex items-center gap-4 min-w-[200px]">
+              <input type="checkbox" class="w-4 h-4 rounded-sm" />
+              <button class="text-gray-400 hover:text-yellow-500">
+                <i class="far fa-star"></i>
+              </button>
+              <span class="font-medium text-gray-900">To: Companies</span>
+            </div>
+            <div class="flex-1 flex gap-2 min-w-0 pr-4">
+              <span class="font-medium text-gray-900 truncate"
+                >Sponsor the Birthday Hackathon of the Year!</span
+              >
+              <span class="text-gray-600 truncate">🥳</span>
+            </div>
+            <div class="text-xs text-gray-600 whitespace-nowrap">Mar 12</div>
+          </div>
+
+          <!-- Fifth Email -->
+          <div
+            class="flex items-center h-12 px-4 hover:bg-gray-200 cursor-pointer"
+            onclick="window.location.href='/pages/tracks.html'"
+          >
+            <div class="flex items-center gap-4 min-w-[200px]">
+              <input type="checkbox" class="w-4 h-4 rounded-sm" />
+              <button class="text-gray-400 hover:text-yellow-500">
+                <i class="far fa-star"></i>
+              </button>
+              <span class="font-medium text-gray-900">To: Everyone</span>
+            </div>
+            <div class="flex-1 flex gap-2 min-w-0 pr-4">
+              <span class="font-medium text-gray-900 truncate"
+                >Hackathon Tracks Revealed for BisonBytes 2025</span
+              >
+            </div>
+            <div class="text-xs text-gray-600 whitespace-nowrap">Mar 15</div>
+          </div>
+
+          <!-- Sixth Email -->
+          <div
+            class="flex items-center h-12 px-4 hover:bg-gray-200 cursor-pointer"
+            onclick="window.location.href='/pages/recap.html'"
+          >
+            <div class="flex items-center gap-4 min-w-[200px]">
+              <input type="checkbox" class="w-4 h-4 rounded-sm" />
+              <button class="text-gray-400 hover:text-yellow-500">
+                <i class="far fa-star"></i>
+              </button>
+              <span class="font-medium text-gray-900">To: Everyone</span>
+            </div>
+            <div class="flex-1 flex gap-2 min-w-0 pr-4">
+              <span class="font-medium text-gray-900 truncate"
+                >Recap on BisonBytes 2024: Howard's first coding hackathon</span
+              >
+              <span class="text-gray-600">👀</span>
+            </div>
+            <div class="text-xs text-gray-600 whitespace-nowrap">Mar 14</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <div class="text-center mt-12">
+        <p class="text-xl font-bold">BISONBYTES 2025</p>
+      </div>
+
+      <!-- Compose Email Section -->
+      <section
+        id="composeWindow"
+        class="fixed bottom-0 right-0 m-4 bg-white rounded-t-lg shadow-lg"
+        style="width: 500px; height: 500px"
+      >
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between px-4 py-2 bg-gray-100 rounded-t-lg cursor-pointer"
+          id="composeHeader"
+        >
+          <h2 class="text-sm font-medium">New Message</h2>
+          <div class="flex items-center gap-2">
+            <button id="minimizeCompose" class="p-1 hover:bg-gray-200 rounded">
+              <i class="fas fa-minus text-gray-600"></i>
+            </button>
+            <button id="maximizeCompose" class="p-1 hover:bg-gray-200 rounded">
+              <i class="fas fa-expand text-gray-600"></i>
+            </button>
+            <button id="closeCompose" class="p-1 hover:bg-gray-200 rounded">
+              <i class="fas fa-times text-gray-600"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Email Form -->
+        <div class="flex flex-col h-[calc(100%-48px)]" id="composeBody">
+          <!-- Recipients -->
+          <div class="px-4 py-2 border-b">
+            <input
+              type="text"
+              placeholder="Recipients"
+              class="w-full text-sm focus:outline-none"
+              value="bisonbytescea@gmail.com"
+              readonly
+            />
+          </div>
+
+          <!-- Subject -->
+          <div class="px-4 py-2 border-b">
+            <input
+              type="text"
+              placeholder="Subject"
+              class="w-full text-sm focus:outline-none"
+              value="Invite to BisonBytes 2025"
+              readonly
+            />
+          </div>
+
+          <!-- Message Body -->
+          <div class="flex-1 p-4">
+            <div class="h-full">
+              <p class="text-sm mb-2">Dear Buddy the Bison,</p>
+              <p class="text-sm">
+                Thank you for inviting me to your birthday party-themed
+                hackathon on
+                <span class="font-bold">March 22nd - March 23rd, 2025</span>! I
+                will be there!!
+              </p>
+              <!-- 🦁 Buddy the Bison Image Inside Message -->
+              <div class="flex justify-center mt-4">
+                <img
+                  id="buddyImage"
+                  src="images/BuddysBirthday.png"
+                  alt="Buddy the Bison"
+                  class="w-32 h-auto rounded-lg shadow-md cursor-pointer"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Attachment -->
+          <div class="flex flex-col m-3">
+            <div class="bg-gray-100 w-8/10 m-1 p-2 rounded-sm font-bold">
+              <a
+                href="pages/recap.html"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-500"
+                >Buddy the Bison Past 2024 Hackathon</a
+              >
+              <span>(420KB)</span>
+              <i class="fas fa-times float-end my-1"></i>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="p-4 bg-gray-50 border-t">
+            <a
+              href="https://8goelckm8uj.typeform.com/to/UBKmNg2O"
+              id="applyButton"
+              class="bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700 inline-block text-center"
+            >
+              APPLY to Bison Bytes 2025
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Confetti & Mascot Container -->
+      <div
+        id="confettiContainer"
+        class="fixed top-0 left-0 w-full h-full hidden flex justify-center items-center z-50 pointer-events-none"
+      >
+        <img
+          src="images/BuddysBirthday.png"
+          alt="Buddy the Bison"
+          class="w-64 h-auto opacity-0 transition-opacity duration-500 absolute"
+          id="buddyMascot"
+        />
+      </div>
+    </main>
+    <script src="/js/loadHtml.js"></script>
+    <script src="/js/slideshow.js"></script>
+    <script src="/js/pageTransitions.js"></script>
+    <script src="/js/compose.js"></script>
+    <script src="/js/highlightActiveNav.js"></script>
+    <script src="/js/confetti.js"></script>
+  </body>
+</html>

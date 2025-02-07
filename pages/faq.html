@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - BisonBytes 2025 Hackathon</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body class="h-screen flex bg-gray-100 page-transition-enter">
+    <aside
+      class="w-1/5 bg-white h-full shadow-md flex flex-col items-center"
+    ></aside>
+
+    <main class="flex-1 p-4 overflow-auto">
+      <!-- Gmail-style header with search -->
+      <div
+        class="flex items-center justify-between px-4 py-2 shadow-sm border-b"
+      >
+        <!-- Search Bar -->
+        <div
+          class="flex items-center bg-white rounded-full px-4 py-2 w-[600px] shadow-sm border"
+        >
+          <i class="fas fa-search text-gray-500"></i>
+          <input
+            type="text"
+            placeholder="Search mail"
+            class="bg-transparent outline-none text-gray-700 pl-2 w-full"
+          />
+          <button class="ml-2 p-1 hover:bg-gray-200 rounded-full">
+            <i class="fas fa-sliders-h text-gray-600"></i>
+          </button>
+        </div>
+
+        <!-- Right Side (Interactive Elements) -->
+        <div class="flex items-center space-x-4">
+          <!-- Active Status -->
+          <div
+            class="flex items-center space-x-1 bg-white rounded-full px-3 py-1 text-gray-700 text-sm border shadow-sm"
+          >
+            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            <span>Active</span>
+            <i class="fas fa-chevron-down text-gray-500"></i>
+          </div>
+
+          <!-- Settings & Apps -->
+          <button class="p-2 hover:bg-gray-200 rounded-full">
+            <i class="fas fa-cog text-gray-600"></i>
+          </button>
+          <button class="p-2 hover:bg-gray-200 rounded-full">
+            <i class="fas fa-th text-gray-600"></i>
+          </button>
+
+          <!-- Profile Icon -->
+          <button class="p-2 rounded-full">
+            <img
+              src="/images/BuddysBirthday.png"
+              alt="User Avatar"
+              class="w-8 h-8 rounded-full border"
+            />
+          </button>
+        </div>
+      </div>
+
+      <!-- FAQ Content -->
+      <section class="mt-4 mb-32">
+        <div class="bg-white rounded-lg shadow-sm p-4">
+          <!-- Left Side: Back Button & Actions -->
+          <div class="flex items-center justify-between px-4 py-2 bg-white">
+            <div class="flex items-center space-x-4">
+              <button
+                onclick="window.location.href='/index.html'"
+                class="p-2 hover:bg-gray-200 rounded-full"
+              >
+                <i class="fas fa-arrow-left text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-inbox text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-exclamation-circle text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-trash text-gray-600"></i>
+              </button>
+              <div class="border-l h-5"></div>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-envelope text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-folder text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-ellipsis-v text-gray-600"></i>
+              </button>
+            </div>
+            <!-- Right Side: Email Counter & Navigation -->
+            <div class="flex items-center space-x-4">
+              <span class="text-gray-600 text-sm whitespace-nowrap"
+                >11 of 1,312</span
+              >
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-chevron-left text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-chevron-right text-gray-600"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2 bg-white">
+            <h1 class="text-2xl font-normal">Frequently Asked Questions</h1>
+          </div>
+          <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(0)"
+                >
+                  <h2 class="text-lg font-semibold">
+                    When and where is BisonBytes 2025?
+                  </h2>
+                  <i class="fas fa-chevron-down" id="icon-0"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-0">
+                  <p class="text-gray-700">
+                    BisonBytes will take place from March 22nd to March 23rd,
+                    2025 at Mackey and Douglass Hall Buildings on Howard
+                    University’s campus!
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(1)"
+                >
+                  <h2 class="text-lg font-semibold">What is BisonBytes?</h2>
+                  <i class="fas fa-chevron-down" id="icon-1"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-1">
+                  <p class="text-gray-700">
+                    BisonBytes is Howard University’s first-ever technical-based
+                    hackathon, a 24-hour coding competition hosted by students
+                    from the College of Engineering and Architecture’s students!
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(2)"
+                >
+                  <h2 class="text-lg font-semibold">Who can participate?</h2>
+                  <i class="fas fa-chevron-down" id="icon-2"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-2">
+                  <p class="text-gray-700">
+                    Any undergraduate student can participate as a hacker!
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(3)"
+                >
+                  <h2 class="text-lg font-semibold">
+                    Will transportation be provided?
+                  </h2>
+                  <i class="fas fa-chevron-down" id="icon-3"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-3">
+                  <p class="text-gray-700">
+                    Yes! If you are a student in the DMV area, our application
+                    includes an option to request travel assistance.
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(4)"
+                >
+                  <h2 class="text-lg font-semibold">
+                    How much does BisonBytes cost?
+                  </h2>
+                  <i class="fas fa-chevron-down" id="icon-4"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-4">
+                  <p class="text-gray-700">
+                    BisonBytes is completely free! We provide free food, amazing
+                    prizes, and networking opportunities with sponsors.
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(5)"
+                >
+                  <h2 class="text-lg font-semibold">
+                    What rules do we need to follow during the competition?
+                  </h2>
+                  <i class="fas fa-chevron-down" id="icon-5"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-5">
+                  <p class="text-gray-700">
+                    Our full list of rules can be found [here] (Insert Link).
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(6)"
+                >
+                  <h2 class="text-lg font-semibold">
+                    Can I bring alcohol or recreational drugs?
+                  </h2>
+                  <i class="fas fa-chevron-down" id="icon-6"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-6">
+                  <p class="text-gray-700">
+                    No. Howard University is a dry campus, meaning participants
+                    are strictly prohibited from possessing, consuming, or
+                    distributing alcohol, drugs, weapons, or other prohibited
+                    substances. Violating this rule will result in
+                    disqualification from the hackathon.
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(7)"
+                >
+                  <h2 class="text-lg font-semibold">
+                    I’ve never been to a hackathon. Should I still come?
+                  </h2>
+                  <i class="fas fa-chevron-down" id="icon-7"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-7">
+                  <p class="text-gray-700">
+                    Absolutely! All skill levels are welcome, and we even have a
+                    beginner track this year to help new hackers get started!
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(8)"
+                >
+                  <h2 class="text-lg font-semibold">Will there be prizes?</h2>
+                  <i class="fas fa-chevron-down" id="icon-8"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-8">
+                  <p class="text-gray-700">
+                    Yes! We will have an overall grand prize as well as prizes
+                    for each competition track.
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(9)"
+                >
+                  <h2 class="text-lg font-semibold">
+                    What if I don’t have a team yet?
+                  </h2>
+                  <i class="fas fa-chevron-down" id="icon-9"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-9">
+                  <p class="text-gray-700">
+                    No worries! We will have a Discord server where you can
+                    connect with other participants before the event. Plus,
+                    during the hackathon, we will host a Meet-Your-Team building
+                    activity to help you find teammates!
+
+                    <a href="#">MLH code of conduct</a>.
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(10)"
+                >
+                  <h2 class="text-lg font-semibold">
+                    Can I leave and return during the hackathon?
+                  </h2>
+                  <i class="fas fa-chevron-down" id="icon-10"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-10">
+                  <p class="text-gray-700">
+                    Yes! Participants are allowed to leave and return during
+                    daylight hours. However, there will be a lock-in period at
+                    night where participants will be required to remain inside
+                    the venue and focus on their work. If you choose to leave
+                    during this lock-in period, you will be disqualified from
+                    the hackathon. This policy is in place to ensure the safety
+                    of all participants and maintain a secure environment
+                    throughout the event.
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(11)"
+                >
+                  <h2 class="text-lg font-semibold">Will food be provided?</h2>
+                  <i class="fas fa-chevron-down" id="icon-11"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-11">
+                  <p class="text-gray-700">
+                    Yes! We will be serving full meals, plenty of snacks, and
+                    even boba!
+                  </p>
+                </div>
+              </div>
+
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(12)"
+                >
+                  <h2 class="text-lg font-semibold">
+                    I’m a company. How can I get involved?
+                  </h2>
+                  <i class="fas fa-chevron-down" id="icon-12"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-12">
+                  <p class="text-gray-700">
+                    We’re always open for collaboration and would love to see
+                    you engage with our student hackers! If you’re interested in
+                    sponsoring, mentoring, or contributing in any way, please
+                    reach out to us at bisonbytescea@gmail.com
+                  </p>
+                </div>
+              </div>
+              <div class="border-b border-gray-200">
+                <button
+                  class="w-full flex justify-between items-center py-4 focus:outline-none"
+                  onclick="toggleFAQ(13)"
+                >
+                  <h2 class="text-lg font-semibold">Have more questions?</h2>
+                  <i class="fas fa-chevron-down" id="icon-13"></i>
+                </button>
+                <div class="faq-content hidden" id="faq-13">
+                  <p class="text-gray-700">
+                    Feel free to reach out to us bisonbytescea@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Email actions -->
+          <div class="border-t p-4">
+            <div class="flex gap-6">
+              <button class="text-gray-600 flex items-center gap-2">
+                <i class="fas fa-reply"></i>
+                <span>Reply</span>
+              </button>
+              <button class="text-gray-600 flex items-center gap-2">
+                <i class="fas fa-reply-all"></i>
+                <span>Reply all</span>
+              </button>
+              <button class="text-gray-600 flex items-center gap-2">
+                <i class="fas fa-forward"></i>
+                <span>Forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- BisonBytes Footer -->
+      <div class="text-center mt-12">
+        <p class="text-xl font-bold">BISONBYTES 2025</p>
+      </div>
+    </main>
+
+    <script src="../js/loadHtml.js"></script>
+    <script src="../js/slideshow.js"></script>
+    <script src="../js/faq.js"></script>
+    <script src="../js/pageTransitions.js"></script>
+    <script src="../js/highlightActiveNav.js"></script>
+  </body>
+</html>

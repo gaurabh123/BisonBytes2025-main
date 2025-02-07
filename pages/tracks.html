@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracks - BisonBytes 2025 Hackathon</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body class="h-screen flex bg-gray-100 page-transition-enter">
+    <aside
+      class="w-1/5 bg-white h-full shadow-md flex flex-col items-center"
+    ></aside>
+
+    <main class="flex-1 p-4 overflow-auto">
+      <!-- Gmail-style header with search -->
+      <div
+        class="flex items-center justify-between px-4 py-2 shadow-sm border-b"
+      >
+        <!-- Search Bar -->
+        <div
+          class="flex items-center bg-white rounded-full px-4 py-2 w-[600px] shadow-sm border"
+        >
+          <i class="fas fa-search text-gray-500"></i>
+          <input
+            type="text"
+            placeholder="Search mail"
+            class="bg-transparent outline-none text-gray-700 pl-2 w-full"
+          />
+          <button class="ml-2 p-1 hover:bg-gray-200 rounded-full">
+            <i class="fas fa-sliders-h text-gray-600"></i>
+          </button>
+        </div>
+
+        <!-- Right Side (Interactive Elements) -->
+        <div class="flex items-center space-x-4">
+          <!-- Active Status -->
+          <div
+            class="flex items-center space-x-1 bg-white rounded-full px-3 py-1 text-gray-700 text-sm border shadow-sm"
+          >
+            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            <span>Active</span>
+            <i class="fas fa-chevron-down text-gray-500"></i>
+          </div>
+
+          <!-- Settings & Apps -->
+          <button class="p-2 hover:bg-gray-200 rounded-full">
+            <i class="fas fa-cog text-gray-600"></i>
+          </button>
+          <button class="p-2 hover:bg-gray-200 rounded-full">
+            <i class="fas fa-th text-gray-600"></i>
+          </button>
+
+          <!-- Profile Icon -->
+          <button class="p-2 rounded-full">
+            <img
+              src="/images/BuddysBirthday.png"
+              alt="User Avatar"
+              class="w-8 h-8 rounded-full border"
+            />
+          </button>
+        </div>
+      </div>
+
+      <!-- Tracks Content -->
+      <section class="mt-4 mb-32">
+        <div class="bg-white rounded-lg shadow-sm p-4">
+          <!-- Left Side: Back Button & Actions -->
+          <div class="flex items-center justify-between px-4 py-2 bg-white">
+            <div class="flex items-center space-x-4">
+              <button
+                onclick="window.location.href='/index.html'"
+                class="p-2 hover:bg-gray-200 rounded-full"
+              >
+                <i class="fas fa-arrow-left text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-inbox text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-exclamation-circle text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-trash text-gray-600"></i>
+              </button>
+              <div class="border-l h-5"></div>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-envelope text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-folder text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-ellipsis-v text-gray-600"></i>
+              </button>
+            </div>
+            <!-- Right Side: Email Counter & Navigation -->
+            <div class="flex items-center space-x-4">
+              <span class="text-gray-600 text-sm whitespace-nowrap"
+                >9 of 1,312</span
+              >
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-chevron-left text-gray-600"></i>
+              </button>
+              <button class="p-2 hover:bg-gray-200 rounded-full">
+                <i class="fas fa-chevron-right text-gray-600"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2 bg-white">
+            <h1 class="text-2xl font-normal">Tracks for BisonBytes 2025</h1>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+            <!-- AI Track -->
+            <div class="bg-blue-950 rounded-3xl p-6">
+              <div class="flex items-center gap-4">
+                <i class="fas fa-robot text-yellow-300 text-3xl"></i>
+                <h2 class="text-yellow-300 text-xl">ARTIFICIAL INTELLIGENCE</h2>
+              </div>
+            </div>
+
+            <!-- Music Track -->
+            <div class="bg-blue-950 rounded-3xl p-6">
+              <div class="flex items-center gap-4">
+                <i class="fas fa-music text-yellow-300 text-3xl"></i>
+                <h2 class="text-yellow-300 text-xl">MUSIC</h2>
+              </div>
+            </div>
+
+            <!-- Fintech Track -->
+            <div class="bg-blue-950 rounded-3xl p-6">
+              <div class="flex items-center gap-4">
+                <i class="fas fa-dollar-sign text-yellow-300 text-3xl"></i>
+                <h2 class="text-yellow-300 text-xl">FINTECH</h2>
+              </div>
+            </div>
+
+            <!-- Gaming Track -->
+            <div class="bg-blue-950 rounded-3xl p-6">
+              <div class="flex items-center gap-4">
+                <i class="fas fa-gamepad text-yellow-300 text-3xl"></i>
+                <h2 class="text-yellow-300 text-xl">GAMING</h2>
+              </div>
+            </div>
+
+            <!-- Health Track -->
+            <div class="bg-blue-950 rounded-3xl p-6">
+              <div class="flex items-center gap-4">
+                <i class="fas fa-heart text-yellow-300 text-3xl"></i>
+                <h2 class="text-yellow-300 text-xl">HEALTH</h2>
+              </div>
+            </div>
+
+            <!-- Education Track -->
+            <div class="bg-blue-950 rounded-3xl p-6">
+              <div class="flex items-center gap-4">
+                <i class="fas fa-graduation-cap text-yellow-300 text-3xl"></i>
+                <h2 class="text-yellow-300 text-xl">EDUCATION</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Email actions -->
+          <div class="border-t p-4">
+            <div class="flex gap-6">
+              <button class="text-gray-600 flex items-center gap-2">
+                <i class="fas fa-reply"></i>
+                <span>Reply</span>
+              </button>
+              <button class="text-gray-600 flex items-center gap-2">
+                <i class="fas fa-reply-all"></i>
+                <span>Reply all</span>
+              </button>
+              <button class="text-gray-600 flex items-center gap-2">
+                <i class="fas fa-forward"></i>
+                <span>Forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- BisonBytes Footer -->
+      <div class="text-center mt-12">
+        <p class="text-xl font-bold">BISONBYTES 2025</p>
+      </div>
+    </main>
+
+    <script src="../js/loadHtml.js"></script>
+    <script src="../js/slideshow.js"></script>
+    <script src="../js/pageTransitions.js"></script>
+    <script src="../js/highlightActiveNav.js"></script>
+  </body>
+</html>
